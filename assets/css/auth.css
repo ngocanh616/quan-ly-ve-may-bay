@@ -1,0 +1,335 @@
+/**
+ * File: auth.css
+ * Mô tả: CSS cho trang đăng nhập và đăng ký
+ */
+
+/* ========================================
+   AUTH PAGE LAYOUT
+======================================== */
+.auth-page {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+/* ========================================
+   AUTH CARD
+======================================== */
+.auth-card {
+    background: white;
+    border-radius: 25px;
+    padding: 3rem;
+    box-shadow: 0 15px 50px rgba(0, 128, 255, 0.1);
+    border: 1px solid rgba(0, 128, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.auth-card:hover {
+    box-shadow: 0 20px 60px rgba(0, 128, 255, 0.15);
+}
+
+/* ========================================
+   AUTH ICON
+======================================== */
+.auth-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #0080FF 0%, #006BA6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    animation: pulse 2s ease-in-out infinite;
+    box-shadow: 0 8px 20px rgba(0, 128, 255, 0.2);
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 8px 20px rgba(0, 128, 255, 0.2);
+    }
+    50% { 
+        transform: scale(1.05);
+        box-shadow: 0 12px 30px rgba(0, 128, 255, 0.3);
+    }
+}
+
+/* ========================================
+   AUTH TITLE & SUBTITLE
+======================================== */
+.auth-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #003B6F;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.auth-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+/* ========================================
+   AUTH FORM
+======================================== */
+.auth-form {
+    margin-top: 2rem;
+}
+
+.auth-form .form-label {
+    font-weight: 500;
+    color: #003B6F;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+.auth-form .form-label i {
+    color: #0080FF;
+}
+
+.auth-form .form-control {
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.auth-form .form-control:focus {
+    border-color: #0080FF;
+    box-shadow: 0 0 0 0.2rem rgba(0, 128, 255, 0.15);
+}
+
+.auth-form .form-control::placeholder {
+    color: #aaa;
+}
+
+/* ========================================
+   PASSWORD TOGGLE
+======================================== */
+.password-wrapper {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.password-toggle:hover {
+    color: #0080FF;
+}
+
+.password-toggle:focus {
+    outline: none;
+}
+
+/* ========================================
+   AUTH BUTTON
+======================================== */
+.btn-auth {
+    padding: 0.9rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.btn-auth:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 128, 255, 0.3);
+}
+
+.btn-auth:active {
+    transform: translateY(0);
+}
+
+/* ========================================
+   AUTH FOOTER
+======================================== */
+.auth-footer {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 1rem;
+}
+
+.auth-footer p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.auth-link {
+    color: #0080FF;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.auth-link:hover {
+    color: #006BA6;
+    text-decoration: underline;
+}
+
+/* ========================================
+   REQUIRED ASTERISK
+======================================== */
+.text-danger {
+    color: #E63946;
+}
+
+/* ========================================
+   FORM VALIDATION STATES
+======================================== */
+.form-control.is-invalid {
+    border-color: #E63946;
+}
+
+.form-control.is-invalid:focus {
+    border-color: #E63946;
+    box-shadow: 0 0 0 0.2rem rgba(230, 57, 70, 0.15);
+}
+
+.form-control.is-valid {
+    border-color: #28a745;
+}
+
+.form-control.is-valid:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.15);
+}
+
+/* ========================================
+   FORGOT PASSWORD LINK
+======================================== */
+.forgot-password-link {
+    color: #0080FF;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.forgot-password-link:hover {
+    color: #006BA6;
+    text-decoration: underline;
+}
+
+.forgot-password-link i {
+    font-size: 0.95rem;
+}
+
+/* ========================================
+   RESET PASSWORD STEPS
+======================================== */
+.auth-subtitle strong {
+    color: #0080FF;
+    font-weight: 600;
+}
+
+/* ========================================
+   HELPER TEXT
+======================================== */
+.text-muted {
+    color: #6c757d;
+}
+
+.text-muted.small {
+    font-size: 0.85rem;
+}
+
+.form-control + small.text-muted {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+}
+
+/* ========================================
+   OUTLINE BUTTON
+======================================== */
+.btn-outline-secondary {
+    border: 2px solid #6c757d;
+    color: #6c757d;
+    background: transparent;
+    font-weight: 600;
+}
+
+.btn-outline-secondary:hover {
+    background: #6c757d;
+    color: white;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+@media (max-width: 768px) {
+    .auth-page {
+        padding: 2rem 0;
+    }
+    
+    .auth-card {
+        padding: 2rem 1.5rem;
+        border-radius: 20px;
+    }
+    
+    .auth-title {
+        font-size: 1.5rem;
+    }
+    
+    .auth-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .auth-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+    
+    .auth-form .form-control {
+        padding: 0.7rem 0.9rem;
+        font-size: 0.9rem;
+    }
+    
+    .btn-auth {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .auth-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .auth-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+    
+    .auth-title {
+        font-size: 1.3rem;
+    }
+}
